@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Monash Ninja!</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<script>
+
+			$(document).ready(function() {
+				$("#form").submit(function() {
+
+					console.log("Posting... " + $("#code").val());
+					
+					console.log(JSON.stringify({code:"test"})); 
+					
+					code = $("#code").val();
+					
+					$.ajax({
+
+						type: "POST",
+						url: "/get",
+						data: JSON.stringify({code: code}),
+						contentType: 'application/json;charset=UTF-8',
+						success: function(data) {
+							if(data.status == "error") {
+								$("#message").html("<span style='background-color: red; color:white;'>Code no longer valid :(</span>");
+							} else {
+								$("#message").html("<span style='background-color: green; color:white;'>Code valid :)! Generating coupon...</span>");
+							}
+							console.log(data.status);
+						}
+
+					});
+
+					event.preventDefault();
+
+				});
+			});
+
+		</script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="content">
+				<div id="message"></div>
+				<form id="form" method="post">
+					<label>Enter your Code:</label>
+					<input type="text" id="code" name="code">
+					<input type="submit" id="go" value="Go!">
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
