@@ -1,5 +1,6 @@
 #!flask/bin/python
 from flask import Flask, request, jsonify, json, render_template, abort
+import time
 
 from flask.ext.mysql import MySQL
 
@@ -42,6 +43,8 @@ def get():
 	cur = conn.cursor()
 
 	print request.form
+	
+	# time.sleep(5)
 
 	try:
 		cur.execute('SELECT * FROM codes WHERE code = ' + request.json['code']) 
