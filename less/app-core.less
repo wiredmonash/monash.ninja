@@ -1,0 +1,106 @@
+// main: app.less
+
+#ninja-head {
+  background: @ninja_black;
+  position: relative;
+  z-index: 1;
+  margin-top: -51px;
+  padding: 120px 0 80px;
+
+  h1 {
+    font-size: 80px;
+    margin: 0 0 21px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: white;
+    text-align: center;
+  }
+
+  span.ninja-logo {
+    display: block;
+    margin: 0 auto 10px;
+    width: 150px;
+    height: 100px;
+    background: url("img/ninja-logo.png") top center no-repeat;
+    background-size: contain;
+  }
+
+  p.subtitle {
+    font-size: 28px;
+    color: white;
+    margin: 0 0 56px;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+#ninja-head form {
+  text-align: center;
+
+  .alert {
+    display: none;
+    margin-bottom: 42px;
+    font-size: 18px;
+    color: white;
+    border: none;
+
+    &.alert-success, &.alert-danger {
+      display: block;
+    }
+
+    &.alert-success {
+      background: #43a047;
+    }
+
+    &.alert-danger {
+      background: #e53935;
+    }
+  }
+
+  &.successful .alert, &.error .alert {
+    display: block;
+  }
+
+  .textual {
+    background: transparent;
+    font-size: 32px;
+    border: none;
+    color: #90a4ae;
+    border-bottom: 2px solid #90a4ae;
+    width: 100%;
+    text-align: center;
+
+    &:focus {
+      outline: none;
+      color: white;
+      border-bottom-color: white;
+    }
+
+    &::-webkit-input-placeholder {
+      opacity: 1;
+      color: #90a4ae;
+    }
+    &::-moz-placeholder {
+      opacity: 1;
+      color: #90a4ae;
+    }
+    &:-ms-input-placeholder {
+      opacity: 1;
+      color: #90a4ae;
+    }
+    &:-moz-placeholder {
+      opacity: 1;
+      color: #90a4ae;
+    }
+  }
+
+  &.successful .textual, &.successful .textual:focus {
+    color: #43a047;
+    border-bottom-color: #43a047;
+  }
+
+  &.error .textual, &.error .textual:focus {
+    color: #e53935;
+    border-bottom-color: #e53935;
+  }
+}

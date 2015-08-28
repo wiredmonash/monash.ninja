@@ -2,97 +2,64 @@
 <html>
 	<head>
 		<title>Monash Ninja!</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-		<!--Materialize CSS & JS-->
-	  	<!-- Compiled and minified CSS -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
-
-		<!-- Compiled and minified JavaScript -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
-		
-	  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-		<script>
-
-			$(document).ready(function() {
-				$("#form").submit(function() {
-
-					console.log("Posting... " + $("#code").val());
-					
-					console.log(JSON.stringify({code:"test"})); 
-					
-					code = $("#code").val();
-					if (code == "") {
-						$("#message").html("Please enter a code.");
-						$("#message").removeClass("green lighten-1");
-						$("#message").addClass("red lighten-1")
-
-					} else {
-						$.ajax({
-
-							type: "POST",
-							url: "/get",
-							data: JSON.stringify({code: code}),
-							contentType: 'application/json;charset=UTF-8',
-							success: function(data) {
-								if(data.status == "error") {
-									$("#message").html("Invalid code.");
-									$("#message").removeClass("green lighten-1")
-									$("#message").addClass("red lighten-1")
-								} else {
-									$("#message").html("Code valid :)! Generating coupon..");
-									$("#message").removeClass("red lighten-1")
-									$("#message").addClass("green lighten-1")
-								}
-								console.log(data.status);
-							}
-
-						});
-				
-					}	
-
-					event.preventDefault();
-
-				});
-			});
-
-		</script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="{{ url_for('static', filename='app.js') }}"></script>
 	</head>
 
 	<body>
-		<!--<div class="container">
-			<div class="content">
-				<div id="message"></div>
-				<form id="form" method="post">
-					<label>Enter your Code:</label>
-					<input type="text" id="code" name="code">
-					<input type="submit" id="go" value="Go!">
-				</form>
-			</div>
-		</div>-->
-		<div class="container">
+
+		<div id="wired-head" class="hide">
+			<div class="container">
 				<div class="row">
-					<div class="col s6 offset-s4">
-						<h3>Monash Ninja</h3>
-						<img src='http://cdn.hugo.sx/8izA89eip.png' width="50%"><br />
-						<div id="message" class="card"></div>
-						<form id="form" method="post">
-							<div class="input-field col s6">
-								<input placeholder="12345" id="code" name="code" type="text">
-								<label>Enter code:</label>
-							</div>
-							<div class="input-field col s6">
-								<button class="btn waves-effect waves-light" type="submit" name="go" id="go">Submit
-									<i class="material-icons right">send</i>
-								 </button>
-							 </div>
-					 	</form>
+					<div class="col-md-6">
+						<h6>Who are we?</h6>
+						<p>
+							WIRED Monash is the student society for IT students and those who are curious about all things
+							digital at Monash University Clayton.
+						</p>
+						<p><a class="btn btn-default" href="http://wired.org.au/">Find out more &raquo;</a></p>
 					</div>
-					<!--<div class="col s6 offset-s4">
-						&copy; Hugo M&uuml;ller-Downing & Wired 2015. Clipart from <a href='http://cliparts.co/clipart/190198'>here</a>.
-						
-					</div>-->
+					<div class="col-md-offset-2 col-md-4">
+						<h6>Where to find us</h6>
+						<ul class="list-unstyled list-inline">
+							<li><a href="http://facebook.com/WiredMonash"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="http://twitter.com/WiredMonash"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="http://instagram.com/WiredMonash"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="http://github.com/WiredMonash"><i class="fa fa-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="small-header">
+			<div class="sl-wrap">
+				<span class="logo"><a href="#" class="wired-logo" id="wired-btn">WIRED Monash</a></span>
+			</div>
+		</div>
+
+		<div id="ninja-head">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<h1><span class="ninja-logo"></span>monash.ninja</h1>
+						<p class="subtitle">Are you the first to find the code?</p>
+
+						<form id="form" method="post">
+							<div id="message" class="alert"></div>
+							<div class="form-group">
+								<input placeholder="Enter the code" id="code" name="code" type="text" class="textual" autocomplete="off">
+							</div>
+							<div class="form-group">
+								<button class="btn btn-default" type="submit" name="go" id="go">Submit</button>
+							 </div>
+						</form>
+
+					</div>
 				</div>
 			</div>
 		</div>
