@@ -1,0 +1,294 @@
+body {
+  background: #efefef;
+  font-family: 'Lato', sans-serif;
+}
+#wired-head {
+  background: #800080;
+  margin: 0 auto;
+}
+#wired-head.hide {
+  display: none;
+}
+#wired-head h6 {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  padding-top: 21px;
+  position: relative;
+}
+#wired-head h6:before {
+  content: ' ';
+  width: 50px;
+  height: 5px;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#wired-head p {
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+#wired-head p:last-child {
+  margin-bottom: 32px;
+}
+#wired-head ul {
+  margin-bottom: 32px;
+}
+#wired-head ul li {
+  font-size: 36px;
+  margin: 0 18px 0 0;
+}
+#wired-head a {
+  color: #c998c9;
+}
+#wired-head a.btn {
+  border: 3px solid white;
+  color: white;
+  background: transparent;
+  font-size: 18px;
+}
+#wired-head a:hover {
+  color: white;
+}
+#wired-head a.btn:hover {
+  background: white;
+  color: #800080;
+}
+#small-header {
+  background: transparent;
+  overflow: hidden;
+  position: relative;
+  z-index: 999;
+}
+#small-header span.logo {
+  background: #800080;
+  display: block;
+  padding: 12px;
+  margin: 0 auto;
+  width: 174px;
+  height: 51px;
+}
+#small-header span.logo a {
+  background: url("img/wired-logo-sl.png") left center no-repeat;
+  width: 150px;
+  height: 27px;
+  display: block;
+  text-indent: -999em;
+}
+#ninja-head {
+  background: #101010;
+  position: relative;
+  z-index: 1;
+  margin-top: -51px;
+  padding: 100px 0;
+  min-height: 80vh;
+  width: 100vw;
+  max-width: 100%;
+  display: table;
+}
+#ninja-head .ninja-head-wrapper {
+  display: table-cell;
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  vertical-align: middle;
+}
+#ninja-head h1 {
+  font-size: 80px;
+  margin: 0 0 21px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: white;
+  text-align: center;
+}
+#ninja-head span.title {
+  display: none;
+}
+#ninja-head span.ninja-logo {
+  display: block;
+  margin: 0 auto 10px;
+  width: 150px;
+  height: 100px;
+  background: url("img/ninja-logo.png") top center no-repeat;
+  background-size: contain;
+}
+#ninja-head p.subtitle {
+  font-size: 24px;
+  color: #999;
+  margin: 0 0 56px;
+  font-weight: 300;
+  text-align: center;
+}
+#ninja-head form {
+  text-align: center;
+}
+#ninja-head form .alert {
+  display: none;
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: white;
+  border: none;
+}
+#ninja-head form .alert.alert-success,
+#ninja-head form .alert.alert-danger {
+  display: block;
+}
+#ninja-head form .alert.alert-success {
+  background: #43a047;
+}
+#ninja-head form .alert.alert-danger {
+  background: #e53935;
+}
+#ninja-head form.successful .alert,
+#ninja-head form.error .alert {
+  display: block;
+}
+#ninja-head form .textual {
+  background: transparent;
+  font-size: 32px;
+  border: none;
+  color: white;
+  border-bottom: 2px solid white;
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+}
+#ninja-head form .textual:focus {
+  outline: none;
+  color: white;
+  border-bottom-color: white;
+}
+#ninja-head form .textual::-webkit-input-placeholder {
+  opacity: 1;
+  color: white;
+}
+#ninja-head form .textual::-moz-placeholder {
+  opacity: 1;
+  color: white;
+}
+#ninja-head form .textual:-ms-input-placeholder {
+  opacity: 1;
+  color: white;
+}
+#ninja-head form .textual:-moz-placeholder {
+  opacity: 1;
+  color: white;
+}
+#ninja-head form button[type=submit] {
+  font-weight: 700;
+  color: #90a4ae;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#ninja-head form button[type=submit] i {
+  margin-right: 3px;
+}
+#ninja-head form button[type=submit]:hover {
+  color: white;
+}
+#footer {
+  background: #d0d0d0;
+  position: relative;
+}
+#footer .logo,
+#footer .credits {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+#footer .logo {
+  background: #800080;
+  text-align: center;
+  margin: 0 -15px;
+}
+#footer .logo p {
+  margin: 0 0 4px;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#footer .logo p:last-child {
+  font-size: 11px;
+}
+#footer .logo span {
+  height: 65px;
+  width: 200px;
+  background: url("img/wired-logo-footer.png") top left no-repeat;
+  background-size: contain;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+#footer .credits {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+#footer .credits h6 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+#footer .credits p {
+  margin: 0 0 4px;
+  color: #888;
+}
+#footer .credits p.gap {
+  margin: 16px 0 4px;
+}
+#footer .credits a {
+  color: #555;
+}
+#footer .credits .love {
+  color: #ff0000;
+}
+@media (min-width: 768px) {
+  #ninja-head h1 span.title {
+    display: block;
+  }
+}
+@media (max-width: 992px) {
+  #footer .container {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  #footer {
+    padding: 42px 0;
+  }
+  #footer:before {
+    position: absolute;
+    content: ' ';
+    width: 50vw;
+    height: 100%;
+    background: #800080;
+    display: block;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  #footer .logo,
+  #footer .credits {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: transprent;
+  }
+  #footer .logo {
+    text-align: right;
+    margin: 0;
+  }
+  #footer .logo span {
+    margin-bottom: 12px;
+  }
+  #footer .credits {
+    text-align: left;
+  }
+  #footer .credits p {
+    font-size: 11px;
+  }
+}

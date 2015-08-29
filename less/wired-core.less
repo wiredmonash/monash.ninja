@@ -1,0 +1,99 @@
+// main: app.less
+
+body {
+  background: @body_bg;
+  font-family: 'Lato', sans-serif;
+}
+
+#wired-head {
+  background: @wired_purple;
+  margin: 0 auto;
+
+  &.hide {
+    display: none;
+  }
+
+  h6 {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    padding-top: 21px;
+    position: relative;
+  }
+
+  h6:before {
+    content: ' ';
+    width: 50px;
+    height: 5px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  p {
+    color: white;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  p:last-child {
+    margin-bottom: 32px;
+  }
+
+  ul {
+    margin-bottom: 32px;
+  }
+
+  ul li {
+    font-size: 36px;
+    margin: 0 18px 0 0;
+  }
+
+  a {
+    color: @nav_colour;
+  }
+
+  a.btn {
+    border: 3px solid white;
+    color: white;
+    background: transparent;
+    font-size: 18px;
+  }
+
+  a:hover {
+    color: white;
+  }
+
+  a.btn:hover {
+    background: white;
+    color: @wired_purple;
+  }
+}
+
+#small-header {
+  background: transparent;
+  overflow: hidden;
+  position: relative;
+  z-index: 999;
+
+  span.logo {
+    background: @wired_purple;
+    display: block;
+    padding: 12px;
+    margin: 0 auto;
+    width: @wired_logo_sl_width + 24px;
+    height: @wired_logo_sl_height + 24px;
+
+    a {
+      background: url(@wired_logo_sl) left center no-repeat;
+      width: @wired_logo_sl_width;
+      height: @wired_logo_sl_height;
+      display: block;
+      text-indent: -999em;
+    }
+  }
+}
