@@ -2,7 +2,6 @@ $(document).ready(function() {
 
   $("#wired-btn").click(function() {
     $("#wired-head").toggleClass("hide");
-    return false;
   });
 
   $("#form").submit(function() {
@@ -39,7 +38,7 @@ $(document).ready(function() {
   });
 
   function reset_form() {
-    $("#form").removeClass("successful error");
+    $("#form").removeClass("successful error blank");
     $("#message").removeClass("alert-success alert-danger");
   };
 

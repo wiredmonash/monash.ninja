@@ -4,6 +4,7 @@
 		<title>Monash Ninja!</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -43,26 +44,46 @@
 		</div>
 
 		<div id="ninja-head">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<h1><span class="ninja-logo"></span>monash.ninja</h1>
-						<p class="subtitle">Are you the first to find the code?</p>
+			<div class="ninja-head-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<h1><span class="ninja-logo"></span><span class="title">monash.ninja</span></h1>
+							<p class="subtitle">Are you the first to find the code?</p>
 
-						<form id="form" method="post">
-							<div id="message" class="alert"></div>
-							<div class="form-group">
-								<input placeholder="Enter the code" id="code" name="code" type="text" class="textual" autocomplete="off">
-							</div>
-							<div class="form-group">
-								<button class="btn btn-default" type="submit" name="go" id="go">Submit</button>
-							 </div>
-						</form>
+							<form id="form" method="post">
+								<div class="form-group">
+									<input placeholder="Enter the code" id="code" name="code" type="text" class="textual" autocomplete="off">
+								</div>
+								<div id="message" class="alert"></div>
+								<div class="form-group">
+									<button class="btn btn-link" type="submit" name="go" id="go"><i class="fa fa-envelope"></i>
+ Submit</button>
+								 </div>
+							</form>
 
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<div id="footer">
+			<div class="container">
+				<div class="col-md-6 credits">
+					<h6>Credits</h6>
+					<p>Concept and Code by <a href="https://hugo.sx/">Hugo Muller-Downing</a></p>
+					<p>Design by <a href="http://terencehuynh.com">Terence Huynh</a></p>
+					<p><a href="https://thenounproject.com/term/ninja/1214/">Ninja</a> by Ridzal Zainal from the Noun Project</p>
+					<p class="gap">Powered by <a href="https://en.wikipedia.org/wiki/Caffeine">C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></a></p>
+					<p>Made with <i class="fa fa-heart love"></i> in Melbourne, Australia</p>
+				</div>
+				<div class="col-md-6 logo">
+					<p>A thing by</p>
+					<p><span class="wired-logo"></span></p>
+					<p>&copy; 2015 WIRED Monash. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
