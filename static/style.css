@@ -157,6 +157,7 @@ body {
   width: 100%;
   text-align: center;
   font-weight: 300;
+  text-transform: uppercase;
 }
 #ninja-head form .textual:focus {
   outline: none;

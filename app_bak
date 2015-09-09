@@ -43,10 +43,13 @@ def get():
 
 	cur = conn.cursor()
 
+	# print request.form
+	
+	# time.sleep(5)
+
 	try:
-		cur.execute("SELECT * FROM codes WHERE code = %s", (request.json['code'],)) 
+		cur.execute('SELECT * FROM codes WHERE code = ' + str(request.json['code']) + '') 
 		code_data= cur.fetchone()
-		print code_data
 
 		code = {
 				'code_id': code_data[0],
@@ -58,20 +61,18 @@ def get():
 		print request.json['code']
 		print request.json['student_id']
 
-		cur.execute("SELECT * FROM codes WHERE student_id = %s", (request.json['student_id'],))
+		cur.execute('SELECT * FROM codes WHERE student_id = ' + request.json['student_id'])
 		sid_data = cur.fetchone()
-
 		# If successful, generate a random coupon_code and put it in the database, if not more than X coupon_codes have been generated for this particular code, otherwise throw an error :(
 		used =  code['used'] 
 		print used
-		print sid_data
 		if used == 0 and sid_data is None:
-			cur.execute("UPDATE codes SET used = 1, student_id = %s WHERE code = %s", (request.json['student_id'], request.json['code'],))
+			cur.execute('UPDATE codes SET used = 1, student_id = ' + request.json['student_id'] + ' WHERE code = ' + request.json['code'])
 			conn.commit();
 			return jsonify({"status":"success"})
-		else:
-			return jsonify({"status":"error"})
 
+		return jsonify({"status":"error1"})
+	
 	except:
 		return jsonify({"status":"error2"})
 	

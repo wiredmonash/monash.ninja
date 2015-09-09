@@ -11,20 +11,25 @@ $(document).ready(function() {
     console.log(JSON.stringify({code:"test"}));
 
     code = $("#code").val();
-    if (code == "") {
-      mark_error("Please enter a code.");
-    } else {
+	sid = $("#sid").val();
+    if (code == "" && sid == "") {
+      mark_error("Please enter a code and a student ID.");
+	} else if (code == ""){
+	  mark_error("Please enter a code");
+	} else if (sid == "") {
+	  mark_error("Please enter a student ID.");
+	} else {
     	$.ajax({
 
     		type: "POST",
     		url: "/get",
-    		data: JSON.stringify({code: code}),
+    		data: JSON.stringify({code: code, student_id: sid}),
     		contentType: 'application/json;charset=UTF-8',
     		success: function(data) {
     			if(data.status == "error") {
     				mark_error("Invalid code.");
     			} else {
-    				mark_success("Code valid :) Generating coupon...");
+    				mark_success("You've won a prize! Come along to our <a href='https://www.facebook.com/events/430433180499149/'>AGM</a> on Monday 14 September to collect it!'");
     			}
     			console.log(data.status);
     		}
