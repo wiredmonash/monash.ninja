@@ -9,6 +9,13 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="{{ url_for('static', filename='app.js') }}"></script>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta property="og:title" content="Monash Ninja!" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://monash.ninja/">
+		<meta property="og:image" content="{{ url_for('static', filename='open-graph.png') }}" />
+		<meta property="og:description" content="Be the first to find a code - and win a prize!" />
 	</head>
 
 	<body>
