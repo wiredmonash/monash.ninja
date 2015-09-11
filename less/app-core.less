@@ -1,12 +1,16 @@
 // main: app.less
 
+.hidden {
+  display: none;
+}
+
 #ninja-head {
   background: @ninja_black;
   position: relative;
   z-index: 1;
   margin-top: -51px;
   padding: 100px 0;
-  min-height: 80vh;
+  min-height: 85vh;
   width: 100vw;
   max-width: 100%;
   display: table;
@@ -50,6 +54,25 @@
   }
 }
 
+#ninja-head .message {
+  background: #333;
+  border: 1px solid #555;
+  padding: 15px;
+  text-align: center;
+
+  p {
+    color: white;
+    margin: 0;
+  }
+
+  h2 {
+    color: white;
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 5px;
+  }
+}
+
 #ninja-head form {
   text-align: center;
 
@@ -86,6 +109,7 @@
     width: 100%;
     text-align: center;
     font-weight: 300;
+    text-transform: uppercase;
 
     &:focus {
       outline: none;
@@ -128,8 +152,41 @@
   }
 }
 
-#footer {
+#ninja-terms {
+  padding: 24px 0;
   background: #d0d0d0;
+
+  h6 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+  }
+
+  p, ol li {
+    margin-bottom: 16px;
+    color: #666;
+    font-size: 12px;
+  }
+
+  ol li p, ol li ol li {
+    margin: 0 0 2px;
+
+    strong {
+      text-decoration: underline;
+      font-weight: 400;
+    }
+  }
+
+  ol li ol {
+    margin-left: 20px;
+    padding-left: 0;
+    list-style: lower-alpha;
+  }
+}
+
+#footer {
+  background: #dfdfdf;
   position: relative;
 
   .logo, .credits {

@@ -4,7 +4,7 @@
 		<title>Monash Ninja!</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -49,14 +49,14 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
 							<h1><span class="ninja-logo"></span><span class="title">monash.ninja</span></h1>
-							<p class="subtitle">Are you the first to find the code?</p>
+							<p class="subtitle">Be the first to find a code - and win a prize!</p>
 
-							<form id="form" method="post">
+							<form id="form" class="hidden" method="post">
 								<div class="form-group">
 									<input placeholder="Enter the code" id="code" name="code" type="text" class="textual" autocomplete="off">
 								</div>
 								<div class="form-group">
-									<input placeholder="Student ID" id="sid" name="sid" type="number" max="50000000" class="textual" autocomplete="off">
+									<input placeholder="Student ID" id="sid" name="sid" type="text" max="50000000" class="textual" autocomplete="off">
 								</div>
 								<div id="message" class="alert"></div>
 								<div class="form-group">
@@ -65,8 +65,86 @@
 								 </div>
 							</form>
 
+							<div class="message hidden"></div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="ninja-terms">
+			<div class="container">
+				<div class="col-md-12">
+					<h6>Terms and Conditions</h6>
+					<p>
+						Those participating in Monash Ninja (the “Entrant”) agree to fully and unconditionally comply
+						with the the Terms and Conditions of the competition. Violations to the official rules, will
+						see the participant’s entry voided.
+					</p>
+					<p>
+						In order to enter this competition, you do not need to pay to win or enter.
+					</p>
+					<ol>
+						<li>
+							<p><strong>SPONSOR</strong></p>
+							<p>
+								The competition sponsor (the “Sponsor”) is WIRED Monash, a student society at Monash
+								University Clayton. They can be contacted at wired@monashclubs.org or by mail at
+								Mailbox 100, 21 Chancellors Walk, Monash University, VIC 3800.
+							</p>
+						</li>
+						<li>
+							<p><strong>ELIGIBILITY</strong></p>
+							<p>
+								The competition is only open to associate and ordinary members of WIRED Monash,
+								with the exception of current or past committee members. If a winner is found to
+								be ineligible, WIRED Monash reserves the right to withhold the prize and
+								invalidate their entry to the competition.
+							</p>
+						</li>
+						<li>
+							<p><strong>COMPETITION PERIOD</strong></p>
+							<p>
+								The competition will start on 12:00pm Monday September 14, and will end on
+								12:00pm Monday September 21.
+							</p>
+						</li>
+						<li>
+							<p><strong>HOW TO ENTER</strong></p>
+							<ol>
+								<li>Members find codes placed in locations around Monash University Clayton.</p>
+								<li>Once finding a code, members enter the code and student ID at the website, monash.ninja.</p>
+								<li>To receive their prize, they must be the first person to enter the code on the website. Any other submission will not be valid.</p>
+								<li>There are 30 codes available around Monash University Clayton, each assigned to a different prize. The prizes are non-refundable and non-exchangable.</p>
+							</ol>
+						</li>
+						<li>
+							<p><strong>PRIZES</strong></p>
+							<p>
+								Winners will be contacted within 72 hours via their Monash University email address.
+								Winners will be able to collect their prize on Monday September 21 at a WIRED Monash
+								event to be held on that day.
+							</p>
+						</li>
+						<li>
+							<p><strong>DISPUTES AND LIABILITY</strong></p>
+							<p>
+								The entrant waives his/her right to claim any damages whatsoever, including, but
+								not limited to, punitive, consequential, direct or indirect damages. All issues
+								and questions concerning the validity, construction, interpretation and
+								enforceability of the rules, the Entrant’s rights and obligations, or the Sponsor’s
+								rights and obligation, are constructed and are governed by the laws of the State
+								of Victoria.
+							</p>
+						</li>
+						<li>
+							<p><strong>CHANGES</strong></p>
+							<p>
+								WIRED Monash reserves the right to change the rules at any time, and reserves the
+								right to end the competition early if unforeseen circumstances have arisen.
+							</p>
+						</li>
+					</ol>
 				</div>
 			</div>
 		</div>
@@ -88,5 +166,6 @@
 				</div>
 			</div>
 		</div>
+
 	</body>
 </html>
